@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "pYkqtLUuWsMqJfIX4aGchkf5nVT9YPRcKc/bt4fYtyI=",
+  "Source": "MyPersonalMatchApi",
+  "BasePath": "_content/MyPersonalMatchApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

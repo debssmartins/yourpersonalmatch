@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAxXdUqG5bWk6bZb/U1EGuCAAAAAACAAAAAAAQZgAAAAEAACAAAACmlVKz9yqauwhyEmLYMCK1Kd1vdhLN+KIXdDLYWfPYWwAAAAAOgAAAAAIAACAAAADsWYucVGpip2zeZ7gWF1cXXnNYc3Mcc/BULWsmiVUV9CAAAABA5bvJ/61JQ7cgGHQQtsD8D5p3oH8T+YwgY49NT6m4fEAAAADXUHbm2q19LU1bGea7It4pdic2I4pn18d6QTN9phPa/fz0Bd6B6N4R1/YDA8GV4kV8bzExLeT+aC1hW0JYTeTu</EncryptedPassword>
+    <_PublishTargetUrl>ftp://198.37.116.25/www.MyPersonalMatch.somee.com</_PublishTargetUrl>
+    <History>False|2023-10-07T19:03:06.8757795Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="appsettings.Development.json">
+      <publishTime>09/19/2023 09:22:18</publishTime>
+    </File>
+    <File Include="appsettings.json">
+      <publishTime>09/18/2023 18:25:37</publishTime>
+    </File>
+    <File Include="Ardalis.Specification.dll">
+      <publishTime>05/26/2023 18:37:14</publishTime>
+    </File>
+    <File Include="Ardalis.Specification.EntityFrameworkCore.dll">
+      <publishTime>05/26/2023 18:36:54</publishTime>
+    </File>
+    <File Include="Azure.Core.dll">
+      <publishTime>06/30/2022 21:28:36</publishTime>
+    </File>
+    <File Include="Azure.Identity.dll">
+      <publishTime>09/19/2022 22:31:34</publishTime>
+    </File>
+    <File Include="cs/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>02/24/2021 19:46:44</publishTime>
+    </File>
+    <File Include="cs/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>02/24/2021 19:43:44</publishTime>
+    </File>
+    <File Include="CsvHelper.dll">
+      <publishTime>11/11/2022 20:49:44</publishTime>
+    </File>
+    <File Include="de/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>02/24/2021 19:46:46</publishTime>
+    </File>
+    <File Include="de/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>02/24/2021 19:43:44</publishTime>
+    </File>
+    <File Include="es/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>02/24/2021 19:46:46</publishTime>
+    </File>
+    <File Include="es/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>02/24/2021 19:43:44</publishTime>
+    </File>
+    <File Include="fr/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>02/24/2021 19:46:46</publishTime>
+    </File>
+    <File Include="fr/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>02/24/2021 19:43:44</publishTime>
+    </File>
+    <File Include="Google.Protobuf.dll">
+      <publishTime>08/09/2022 15:11:24</publishTime>
+    </File>
+    <File Include="ICSharpCode.SharpZipLib.dll">
+      <publishTime>09/19/2021 11:20:24</publishTime>
+    </File>
+    <File Include="it/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>02/24/2021 19:46:46</publishTime>
+    </File>
+    <File Include="it/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>02/24/2021 19:43:44</publishTime>
+    </File>
+    <File Include="ja/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>02/24/2021 19:46:46</publishTime>
+    </File>
+    <File Include="ja/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>02/24/2021 19:43:44</publishTime>
+    </File>
+    <File Include="ko/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>02/24/2021 19:46:46</publishTime>
+    </File>
+    <File Include="ko/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>02/24/2021 19:43:44</publishTime>
+    </File>
+    <File Include="Microsoft.AspNetCore.OpenApi.dll">
+      <publishTime>01/30/2023 18:45:12</publishTime>
+    </File>
+    <File Include="Microsoft.Bcl.AsyncInterfaces.dll">
+      <publishTime>04/15/2020 00:39:12</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>02/24/2021 19:46:44</publishTime>
+    </File>
+    <File Include="Microsoft.CodeAnalysis.dll">
+      <publishTime>02/24/2021 19:43:44</publishTime>
+    </File>
+    <File Include="Microsoft.Data.SqlClient.dll">
+      <publishTime>03/28/2023 07:28:24</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Abstractions.dll">
+      <publishTime>08/09/2023 18:35:30</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.dll">
+      <publishTime>08/09/2023 18:35:46</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.Relational.dll">
+      <publishTime>08/09/2023 18:35:56</publishTime>
+    </File>
+    <File Include="Microsoft.EntityFrameworkCore.SqlServer.dll">
+      <publishTime>08/09/2023 18:36:02</publishTime>
+    </File>
+    <File Include="Microsoft.Identity.Client.dll">
+      <publishTime>10/03/2022 19:40:38</publishTime>
+    </File>
+    <File Include="Microsoft.Identity.Client.Extensions.Msal.dll">
+      <publishTime>11/19/2021 23:02:00</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Abstractions.dll">
+      <publishTime>10/13/2022 21:42:54</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.JsonWebTokens.dll">
+      <publishTime>10/13/2022 21:20:20</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Logging.dll">
+      <publishTime>10/13/2022 21:22:04</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.dll">
+      <publishTime>10/13/2022 21:24:18</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Protocols.OpenIdConnect.dll">
+      <publishTime>10/13/2022 21:34:00</publishTime>
+    </File>
+    <File Include="Microsoft.IdentityModel.Tokens.dll">
+      <publishTime>10/13/2022 21:29:00</publishTime>
+    </File>
+    <File Include="Microsoft.ML.AutoML.dll">
+      <publishTime>02/01/2023 00:20:56</publishTime>
+    </File>
+    <File Include="Microsoft.ML.Core.dll">
+      <publishTime>02/01/2023 00:19:34</publishTime>
+    </File>
+    <File Include="Microsoft.ML.CpuMath.dll">
+      <publishTime>02/01/2023 00:19:08</publishTime>
+    </File>
+    <File Include="Microsoft.ML.Data.dll">
+      <publishTime>02/01/2023 00:19:52</publishTime>
+    </File>
+    <File Include="Microsoft.ML.DataView.dll">
+      <publishTime>02/01/2023 00:19:18</publishTime>
+    </File>
+    <File Include="Microsoft.ML.dll">
+      <publishTime>02/01/2023 00:20:06</publishTime>
+    </File>
+    <File Include="Microsoft.ML.DnnImageFeaturizer.AlexNet.dll">
+      <publishTime>02/01/2023 00:20:24</publishTime>
+    </File>
+    <File Include="Microsoft.ML.DnnImageFeaturizer.ResNet101.dll">
+      <publishTime>02/01/2023 00:20:26</publishTime>
+    </File>
+    <File Include="Microsoft.ML.DnnImageFeaturizer.ResNet18.dll">
+      <publishTime>02/01/2023 00:20:26</publishTime>
+    </File>
+    <File Include="Microsoft.ML.DnnImageFeaturizer.ResNet50.dll">
+      <publishTime>02/01/2023 00:20:24</publishTime>
+    </File>
+    <File Include="Microsoft.ML.FastTree.dll">
+      <publishTime>02/01/2023 00:20:18</publishTime>
+    </File>
+    <File Include="Microsoft.ML.ImageAnalytics.dll">
+      <publishTime>02/01/2023 00:20:18</publishTime>
+    </File>
+    <File Include="Microsoft.ML.KMeansClustering.dll">
+      <publishTime>02/01/2023 00:20:00</publishTime>
+    </File>
+    <File Include="Microsoft.ML.LightGbm.dll">
+      <publishTime>02/01/2023 00:20:32</publishTime>
+    </File>
+    <File Include="Microsoft.ML.Mkl.Components.dll">
+      <publishTime>02/01/2023 00:20:24</publishTime>
+    </File>
+    <File Include="Microsoft.ML.OnnxRuntime.dll">
+      <publishTime>12/07/2021 04:48:10</publishTime>
+    </File>
+    <File Include="Microsoft.ML.OnnxTransformer.dll">
+      <publishTime>02/01/2023 00:20:14</publishTime>
+    </File>
+    <File Include="Microsoft.ML.PCA.dll">
+      <publishTime>02/01/2023 00:19:56</publishTime>
+    </File>
+    <File Include="Microsoft.ML.Recommender.dll">
+      <publishTime>02/01/2023 00:20:12</publishTime>
+    </File>
+    <File Include="Microsoft.ML.SearchSpace.dll">
+      <publishTime>02/01/2023 00:19:22</publishTime>
+    </File>
+    <File Include="Microsoft.ML.StandardTrainers.dll">
+      <publishTime>02/01/2023 00:19:56</publishTime>
+    </File>
+    <File Include="Microsoft.ML.TensorFlow.dll">
+      <publishTime>02/01/2023 00:20:40</publishTime>
+    </File>
+    <File Include="Microsoft.ML.TimeSeries.dll">
+      <publishTime>02/01/2023 00:20:24</publishTime>
+    </File>
+    <File Include="Microsoft.ML.Tokenizers.dll">
+      <publishTime>02/01/2023 00:19:22</publishTime>
+    </File>
+    <File Include="Microsoft.ML.TorchSharp.dll">
+      <publishTime>02/01/2023 00:20:08</publishTime>
+    </File>
+    <File Include="Microsoft.ML.Transforms.dll">
+      <publishTime>02/01/2023 00:20:02</publishTime>
+    </File>
+    <File Include="Microsoft.ML.Vision.dll">
+      <publishTime>02/01/2023 00:20:44</publishTime>
+    </File>
+    <File Include="Microsoft.OpenApi.dll">
+      <publishTime>09/26/2022 14:32:38</publishTime>
+    </File>
+    <File Include="Microsoft.SqlServer.Server.dll">
+      <publishTime>01/27/2022 18:19:08</publishTime>
+    </File>
+    <File Include="Microsoft.Win32.SystemEvents.dll">
+      <publishTime>10/23/2021 01:40:24</publishTime>
+    </File>
+    <File Include="MyPersonalMatchApi.deps.json">
+      <publishTime>10/07/2023 21:00:41</publishTime>
+    </File>
+    <File Include="MyPersonalMatchApi.dll">
+      <publishTime>10/07/2023 20:46:42</publishTime>
+    </File>
+    <File Include="MyPersonalMatchApi.exe">
+      <publishTime>10/07/2023 20:59:21</publishTime>
+    </File>
+    <File Include="MyPersonalMatchApi.pdb">
+      <publishTime>10/07/2023 20:59:21</publishTime>
+    </File>
+    <File Include="MyPersonalMatchApi.runtimeconfig.json">
+      <publishTime>10/07/2023 20:10:56</publishTime>
+    </File>
+    <File Include="Newtonsoft.Json.dll">
+      <publishTime>03/17/2021 21:03:36</publishTime>
+    </File>
+    <File Include="NumSharp.Lite.dll">
+      <publishTime>09/06/2020 15:54:22</publishTime>
+    </File>
+    <File Include="pl/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>02/24/2021 19:46:46</publishTime>
+    </File>
+    <File Include="pl/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>02/24/2021 19:43:44</publishTime>
+    </File>
+    <File Include="Protobuf.Text.dll">
+      <publishTime>02/10/2020 03:57:00</publishTime>
+    </File>
+    <File Include="pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>02/24/2021 19:46:46</publishTime>
+    </File>
+    <File Include="pt-BR/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>02/24/2021 19:43:44</publishTime>
+    </File>
+    <File Include="ru/Microsoft.CodeAnalysis.CSharp.resources.dll">
+      <publishTime>02/24/2021 19:46:46</publishTime>
+    </File>
+    <File Include="ru/Microsoft.CodeAnalysis.resources.dll">
+      <publishTime>02/24/2021 19:43:46</publishTime>
+    </File>
+    <File Include="runtimes/linux-arm/native/libLdaNative.so">
+      <publishTime>02/01/2023 00:14:12</publishTime>
+    </File>
+    <File Include="runtimes/linux-arm/native/libMatrixFactorizationNative.so">
+      <publishTime>02/01/2023 00:14:10</publishTime>
+    </File>
+    <File Include="runtimes/linux-arm/native/libSkiaSharp.so">
+      <publishTime>10/04/2022 00:07:08</publishTime>
+    </File>
+    <File Include="runtimes/linux-arm64/native/libLdaNative.so">
+      <publishTime>02/01/2023 00:14:12</publishTime>
+    </File>
+    <File Include="runtimes/linux-arm64/native/libMatrixFactorizationNative.so">
+      <publishTime>02/01/2023 00:14:10</publishTime>
+    </File>
+    <File Include="runtimes/linux-arm64/native/libSkiaSharp.so">
+      <publishTime>10/04/2022 00:07:02</publishTime>
+    </File>
+    <File Include="runtimes/linux-musl-x64/native/libSkiaSharp.so">
+      <publishTime>10/04/2022 00:07:04</publishTime>
+    </File>
+    <File Include="runtimes/linux-x64/native/libFastTreeNative.so">
+      <publishTime>02/01/2023 00:14:04</publishTime>
+    </File>
+    <File Include="runtimes/linux-x64/native/libLdaNative.so">
+      <publishTime>02/01/2023 00:14:12</publishTime>
+    </File>
+    <File Include="runtimes/linux-x64/native/libLibTorchSharp.so">
+      <publishTime>10/13/2022 19:03:30</publishTime>
+    </File>
+    <File Include="runtimes/linux-x64/native/libMatrixFactorizationNative.so">
+      <publishTime>02/01/2023 00:14:12</publishTime>
+    </File>
+    <File Include="runtimes/linux-x64/native/libMklImports.so">
+      <publishTime>02/01/2023 00:14:12</publishTime>
+    </File>
+    <File Include="runtimes/linux-x64/native/libMklProxyNative.so">
+      <publishTime>02/01/2023 00:14:04</publishTime>
+    </File>
+    <File Include="runtimes/linux-x64/native/libSkiaSharp.so">
+      <publishTime>10/04/2022 00:07:06</publishTime>
+    </File>
+    <File Include="runtimes/linux-x64/native/libSymSgdNative.so">
+      <publishTime>02/01/2023 00:14:04</publishTime>
+    </File>
+    <File Include="runtimes/linux-x64/native/lib_lightgbm.so">
+      <publishTime>11/26/2019 19:28:40</publishTime>
+    </File>
+    <File Include="runtimes/osx-arm64/native/libLdaNative.dylib">
+      <publishTime>02/01/2023 00:14:12</publishTime>
+    </File>
+    <File Include="runtimes/osx-arm64/native/libMatrixFactorizationNative.dylib">
+      <publishTime>02/01/2023 00:14:12</publishTime>
+    </File>
+    <File Include="runtimes/osx-x64/native/libFastTreeNative.dylib">
+      <publishTime>02/01/2023 00:14:04</publishTime>
+    </File>
+    <File Include="runtimes/osx-x64/native/libLdaNative.dylib">
+      <publishTime>02/01/2023 00:14:12</publishTime>
+    </File>
+    <File Include="runtimes/osx-x64/native/libLibTorchSharp.dylib">
+      <publishTime>10/13/2022 19:03:42</publishTime>
+    </File>
+    <File Include="runtimes/osx-x64/native/libMatrixFactorizationNative.dylib">
+      <publishTime>02/01/2023 00:14:12</publishTime>
+    </File>
+    <File Include="runtimes/osx-x64/native/libMklProxyNative.dylib">
+      <publishTime>02/01/2023 00:14:04</publishTime>
+    </File>
+    <File Include="runtimes/osx-x64/native/libSymSgdNative.dylib">
+      <publishTime>02/01/2023 00:14:04</publishTime>
+    </File>
+    <File Include="runtimes/osx-x64/native/lib_lightgbm.dylib">
+      <publishTime>11/26/2019 19:28:40</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll">
+      <publishTime>03/28/2023 07:28:24</publishTime>
+    </File>
+    <File Include="runtimes/unix/lib/net6.0/System.Drawing.Common.dll">
+      <publishTime>10/23/2021 01:51:42</publishTime>
+    </File>
+    <File Include="runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>01/12/2023 23:19:36</publishTime>
+    </File>
+    <File Include="runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll">
+      <publishTime>01/12/2023 23:19:36</publishTime>
+    </File>
+    <File Include="runtimes/win-x64/native/FastTreeNative.dll">
+      <publishTime>02/01/2023 00:18:28</publishTime>
+    </File>
+    <File Include="runtimes/win-x64/native/LdaNative.dll">
+      <publishTime>02/01/2023 00:18:46</publishTime>
+    </File>
+    <File Include="runtimes/win-x64/native/lib_lightgbm.dll">
+      <publishTime>11/26/2019 19:28:40</publishTime>
+    </File>
+    <File Include="runtimes/win-x64/native/MklProxyNative.dll">
+      <publishTime>02/01/2023 00:18:54</publishTime>
+    </File>
+    <File Include="runtimes/win-x64/native/SymSgdNative.dll">
+      <publishTime>02/01/2023 00:18:56</publishTime>
+    </File>
+    <File Include="runtimes/win-x86/native/FastTreeNative.dll">
+      <publishTime>02/01/2023 00:14:04</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll">
+      <publishTime>03/28/2023 07:27:58</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll">
+      <publishTime>10/23/2021 01:40:18</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/net6.0/System.Drawing.Common.dll">
+      <publishTime>10/23/2021 01:48:10</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/net6.0/System.Runtime.Caching.dll">
+      <publishTime>10/23/2021 01:52:44</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>10/23/2021 01:51:04</publishTime>
+    </File>
+    <File Include="runtimes/win/lib/net6.0/System.Windows.Extensions.dll">
+      <publishTime>10/23/2021 01:49:58</publishTime>
+    </File>
+    <File Include="SkiaSharp.dll">
+      <publishTime>10/04/2022 00:36:52</publishTime>
+    </File>
+    <File Include="Swashbuckle.AspNetCore.Swagger.dll">
+      <publishTime>07/19/2022 17:21:22</publishTime>
+    </File>
+    <File Include="Swashbuckle.AspNetCore.SwaggerGen.dll">
+      <publishTime>07/19/2022 17:21:38</publishTime>
+    </File>
+    <File Include="Swashbuckle.AspNetCore.SwaggerUI.dll">
+      <publishTime>07/19/2022 17:21:48</publishTime>
+    </File>
+    <File Include="System.CodeDom.dll">
+      <publishTime>05/15/2018 15:29:52</publishTime>
+    </File>
+    <File Include="System.Configuration.ConfigurationManager.dll">
+      <publishTime>08/19/2022 21:58:02</publishTime>
+    </File>
+    <File Include="System.Drawing.Common.dll">
+      <publishTime>10/23/2021 01:49:12</publishTime>
+    </File>
+    <File Include="System.IdentityModel.Tokens.Jwt.dll">
+      <publishTime>10/13/2022 21:18:58</publishTime>
+    </File>
+    <File Include="System.Memory.Data.dll">
+      <publishTime>04/08/2021 18:45:54</publishTime>
+    </File>
+    <File Include="System.Runtime.Caching.dll">
+      <publishTime>10/23/2021 01:52:02</publishTime>
+    </File>
+    <File Include="System.Security.Cryptography.ProtectedData.dll">
+      <publishTime>10/23/2021 01:51:04</publishTime>
+    </File>
+    <File Include="System.Security.Permissions.dll">
+      <publishTime>10/23/2021 01:49:50</publishTime>
+    </File>
+    <File Include="System.Windows.Extensions.dll">
+      <publishTime>10/23/2021 01:49:44</publishTime>
+    </File>
+    <File Include="TensorFlow.NET.dll">
+      <publishTime>09/29/2020 21:56:30</publishTime>
+    </File>
+    <File Include="TorchSharp.dll">
+      <publishTime>10/13/2022 19:06:10</publishTime>
+    </File>
+    <File Include="web.config">
+      <publishTime>10/07/2023 21:00:41</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
