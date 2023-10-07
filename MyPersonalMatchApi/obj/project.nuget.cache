@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "n3L9IbZlZz3ua5rFfh1g8TRS2n/o/FyQAixs7QzCEmCB8qSD2I/AcqRaTjurB/ZR8dM8phh3gTpjsB19PbaY2g==",
+  "dgSpecHash": "AAEu2hsiqF5tEzdMoOkmrgddzfet050kQaSnB5qL68pX5I38Ju37E1jprfv9PvtN+B6hXUcNBgwBEUPgXMtT3g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Débora Jesus\\Desktop\\Personal stuff\\Final project\\BackEnd\\MyPersonalMatchApi\\MyPersonalMatchApi.csproj",
+  "projectFilePath": "C:\\Users\\Débora Jesus\\Desktop\\Personal stuff\\yourpersonalmatch\\MyPersonalMatchApi\\MyPersonalMatchApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Débora Jesus\\.nuget\\packages\\ardalis.specification\\7.0.0\\ardalis.specification.7.0.0.nupkg.sha512",
     "C:\\Users\\Débora Jesus\\.nuget\\packages\\ardalis.specification.entityframeworkcore\\7.0.0\\ardalis.specification.entityframeworkcore.7.0.0.nupkg.sha512",

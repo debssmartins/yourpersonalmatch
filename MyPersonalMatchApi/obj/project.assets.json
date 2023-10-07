@@ -6120,11 +6120,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Débora Jesus\\Desktop\\Personal stuff\\Final project\\BackEnd\\MyPersonalMatchApi\\MyPersonalMatchApi.csproj",
+      "projectUniqueName": "C:\\Users\\Débora Jesus\\Desktop\\Personal stuff\\yourpersonalmatch\\MyPersonalMatchApi\\MyPersonalMatchApi.csproj",
       "projectName": "MyPersonalMatchApi",
-      "projectPath": "C:\\Users\\Débora Jesus\\Desktop\\Personal stuff\\Final project\\BackEnd\\MyPersonalMatchApi\\MyPersonalMatchApi.csproj",
+      "projectPath": "C:\\Users\\Débora Jesus\\Desktop\\Personal stuff\\yourpersonalmatch\\MyPersonalMatchApi\\MyPersonalMatchApi.csproj",
       "packagesPath": "C:\\Users\\Débora Jesus\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Débora Jesus\\Desktop\\Personal stuff\\Final project\\BackEnd\\MyPersonalMatchApi\\obj\\",
+      "outputPath": "C:\\Users\\Débora Jesus\\Desktop\\Personal stuff\\yourpersonalmatch\\MyPersonalMatchApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
