@@ -86,7 +86,7 @@ function sendDataTrainModel() {
        let authToken = sessionStorage.getItem("authToken");
    
        // Make the POST request to your backend
-       fetch('https://localhost:44310/trainmodel', {
+       fetch('https://mypersonalmatch.bsite.net/trainmodel', {
            method: 'POST',
            body: formData,
            headers: {
@@ -101,7 +101,7 @@ function sendDataTrainModel() {
            } else if (response.ok) {
                return response.text();
            }else if (response.status == 400) {
-            throw new Error(response.statusText);
+            showModalFailToTrain();
         } else {
                throw new Error(`HTTP Error: ${response.statusText}`);
            }
@@ -122,7 +122,6 @@ function showModal() {
 }
 
 function OkButtonModal() {
-    console.log("enntou")
     window.location.href = 'login.html';
    
    
@@ -138,7 +137,7 @@ function loginUser() {
         password: password
     };
     
-    fetch('https://localhost:44310/login', {
+    fetch('https://mypersonalmatch.bsite.net/login', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -174,7 +173,7 @@ function registerUser() {
         password: password
     };
     
-    fetch('https://localhost:44310/register', {
+    fetch('https://mypersonalmatch.bsite.net/register', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -464,7 +463,7 @@ function evaluateModel(){
   
   let authToken = sessionStorage.getItem("authToken");
     // Send the data to your backend API using a POST request
-    fetch('https://localhost:44310/evaluateModel', {
+    fetch('https://mypersonalmatch.bsite.net/evaluateModel', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -508,10 +507,6 @@ function displayModal(data) {
         document.getElementById("state").textContent = `State: Sorry! Won't work!`; 
     }
 
-   
-   
- 
-
     // Display the modal
     modal.style.display = "block";
 
@@ -521,4 +516,22 @@ function displayModal(data) {
         // Hide the modal when OK is clicked
         modal.style.display = "none";
     });
+}
+
+function showModalFailToTrain(){
+     // Obtén el modal y el texto del modal por sus IDs
+     var modal = document.getElementById('modalTrainModel');
+     var modalText = document.getElementById('modalText');
+ 
+     // Establece el mensaje de error en el modal
+     modalText.textContent = "To train a model you must submit a variety of data. Please provide a variety of data in the table (do not put the same data in all rows of the table).";
+ 
+     // Muestra el modal
+     modal.style.display = 'block';
+ 
+     // Agrega un manejador de eventos al botón "OK" para cerrar el modal
+     var modalOK = document.getElementById('buttonmodalOK');
+     modalOK.addEventListener('click', function() {
+         modal.style.display = 'none';
+     });
 }

@@ -31,7 +31,6 @@ namespace MyPersonalMatchApi.Controllers
                 return Unauthorized("No token provided");
             }
 
-
             try
             {
                 var file = Request.Form.Files["csv_file"]; // Get the uploaded file
@@ -66,7 +65,7 @@ namespace MyPersonalMatchApi.Controllers
             catch (Exception ex)
             {
                 // Handle exceptions gracefully
-                return BadRequest("Something went wrong");
+                return BadRequest("To train a model you must submit a variety of data. Please provide a variety of data in the table (do not put the same data in all rows of the table).");
             }
         }
 

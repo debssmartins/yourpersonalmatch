@@ -11794,7 +11794,7 @@ html {
 
 /* Styles for the OK button */
 #okButtonEvaluate {
-  background-color:  #ffc107;;
+  background-color:  #ffc107;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -11803,5 +11803,19 @@ html {
 }
 
 #okButtonEvaluate:hover {
+  background-color:  #fd7e14;
+}
+
+/* Estilo del botón OK */
+#buttonmodalOK {
+  background-color:  #ffc107;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#buttonmodalOK:hover {
   background-color:  #fd7e14;
 }
