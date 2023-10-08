@@ -61,7 +61,7 @@ function downloadCSVFile(csv_data) {
     var temp_link = document.createElement('a');
  
     // Download csv file
-    temp_link.download = "GfG.csv";
+    temp_link.download = "MyPersonalData.csv";
     var url = window.URL.createObjectURL(CSVFile);
     temp_link.href = url;
  
@@ -75,6 +75,7 @@ function downloadCSVFile(csv_data) {
 }
  
 function sendDataTrainModel() {
+    showLoadingScreen();
        // Get the CSV data
        var csv_data = tableToCSV(); // You should implement this function to retrieve your CSV data
 
@@ -99,6 +100,13 @@ function sendDataTrainModel() {
                console.error('Unauthorized: You are not authenticated.');
                showModal();
            } else if (response.ok) {
+           
+             // Retrasar la ocultación del div de carga durante 2 segundos
+          setTimeout(function() {
+            hideLoadingScreen();
+            // Redirigir a la página de entrenamiento después de ocultar la pantalla de carga
+          
+          }, 10000); // Cambia el valor de 2000 a la cantidad de milisegundos que deseas esperar
                return response.text();
            }else if (response.status == 400) {
             showModalFailToTrain();
@@ -126,43 +134,57 @@ function OkButtonModal() {
    
    
 }
-
-
-function loginUser() {
+function showLoadingScreen() {
+    var loadingScreen = document.querySelector(".loading-screen");
+    loadingScreen.style.display = "flex";
+  }
+  
+  function hideLoadingScreen() {
+    var loadingScreen = document.querySelector(".loading-screen");
+    loadingScreen.style.display = "none";
+  }
+  
+  function loginUser() {
+    // Mostrar el div de carga cuando se hace clic en el botón de inicio de sesión
+    showLoadingScreen();
+  
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
-    
+  
     var data = {
-        email: email,
-        password: password
+      email: email,
+      password: password
     };
-    
+  
     fetch('https://mypersonalmatch.bsite.net/login', {
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-            'Content-Type': 'application/json',
-            }
-        })
-        .then(async response => {
-            if (response.ok) {
-                const userId = await response.text();
-                
-                sessionStorage.setItem("authToken",JSON.stringify("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9") +"?"+ userId);
-                  
-               
-                window.location.href = 'trainmodel.html';
-            } else {
-                // Show an error message in a div below the login form
-                var errorDiv = document.getElementById('submitErrorMessage');
-                errorDiv.innerText = 'Login failed. Please check your credentials.';
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-     });
-}
-
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
+      .then(async response => {
+        if (response.ok) {
+          const userId = await response.text();
+  
+          sessionStorage.setItem("authToken", JSON.stringify("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9") + "?" + userId);
+  
+          // Retrasar la ocultación del div de carga durante 2 segundos
+          setTimeout(function() {
+            hideLoadingScreen();
+            // Redirigir a la página de entrenamiento después de ocultar la pantalla de carga
+            window.location.href = 'trainmodel.html';
+          }, 2000); // Cambia el valor de 2000 a la cantidad de milisegundos que deseas esperar
+        } else {
+          // Mostrar un mensaje de error en un div debajo del formulario de inicio de sesión
+          var errorDiv = document.getElementById('submitErrorMessage');
+          errorDiv.innerText = 'Login failed. Please check your credentials.';
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
 
 function registerUser() {
     var email = document.getElementById("email").value;
@@ -196,9 +218,15 @@ function registerUser() {
 }
 
 function logoutUser() {
-
+    showLoadingScreen();
     sessionStorage.clear();
-    window.location.href = 'index.html';
+     // Retrasar la ocultación del div de carga durante 2 segundos
+     setTimeout(function() {
+        hideLoadingScreen();
+        // Redirigir a la página de entrenamiento después de ocultar la pantalla de carga
+        window.location.href = 'index.html';
+      }, 2000); // Cambia el valor de 2000 a la cantidad de milisegundos que deseas esperar
+  
 }
 
 // Function to initialize the select elements
@@ -522,7 +550,7 @@ function showModalFailToTrain(){
      // Obtén el modal y el texto del modal por sus IDs
      var modal = document.getElementById('modalTrainModel');
      var modalText = document.getElementById('modalText');
- 
+     hideLoadingScreen();
      // Establece el mensaje de error en el modal
      modalText.textContent = "To train a model you must submit a variety of data. Please provide a variety of data in the table (do not put the same data in all rows of the table).";
  
