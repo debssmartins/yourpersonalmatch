@@ -261,7 +261,7 @@ function initializeHairSelect(){
             { value: 'Black', text: 'Black' },
             { value: 'Blond', text: 'Blond' },
             { value: 'Brown', text: 'Brown' },
-            { value: 'Colorful', text: 'Other' },
+            { value: 'Other', text: 'Other' },
             // Add more common options as needed
         ];
 
