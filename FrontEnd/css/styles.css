@@ -11883,27 +11883,27 @@ html {
 
 .loading span:nth-child(1) {
   border-radius: 50% 50% 0 50%;
-  background-color: #ffbe0b;
+  background-color: #e21e80;
   transform-origin: bottom right;
 }
 
 .loading span:nth-child(2) {
   border-radius: 50% 50% 50% 0;
-  background-color: #ff006e;
+  background-color: #dc3545;
   transform-origin: bottom left;
   animation-delay: 0.5s;
 }
 
 .loading span:nth-child(3) {
   border-radius: 50% 0 50% 50%;
-  background-color: #fb5607;
+  background-color: #ffc107;
   transform-origin: top right;
   animation-delay: 1.5s;
 }
 
 .loading span:nth-child(4) {
   border-radius: 0 50% 50% 50%;
-  background-color: #8338ec;
+  background-color: #fd7e14;
   transform-origin: top left;
   animation-delay: 1s;
 }
