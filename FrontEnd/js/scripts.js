@@ -87,7 +87,7 @@ function sendDataTrainModel() {
        let authToken = sessionStorage.getItem("authToken");
    
        // Make the POST request to your backend
-       fetch('https://mypersonalmatch.bsite.net/trainmodel', {
+       fetch('https://mypersonalmatch.azurewebsites.net/Home/trainmodel', {
            method: 'POST',
            body: formData,
            headers: {
@@ -156,7 +156,7 @@ function showLoadingScreen() {
       password: password
     };
   
-    fetch('https://mypersonalmatch.bsite.net/login', {
+    fetch('https://mypersonalmatch.azurewebsites.net/Home/login', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -178,6 +178,7 @@ function showLoadingScreen() {
         } else {
           // Mostrar un mensaje de error en un div debajo del formulario de inicio de sesión
           var errorDiv = document.getElementById('submitErrorMessage');
+          hideLoadingScreen();
           errorDiv.innerText = 'Login failed. Please check your credentials.';
         }
       })
@@ -195,7 +196,7 @@ function registerUser() {
         password: password
     };
     
-    fetch('https://mypersonalmatch.bsite.net/register', {
+    fetch('https://mypersonalmatch.azurewebsites.net/Home/register', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -491,7 +492,7 @@ function evaluateModel(){
   
   let authToken = sessionStorage.getItem("authToken");
     // Send the data to your backend API using a POST request
-    fetch('https://mypersonalmatch.bsite.net/evaluateModel', {
+    fetch('https://mypersonalmatch.azurewebsites.net/Home/evaluateModel', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
