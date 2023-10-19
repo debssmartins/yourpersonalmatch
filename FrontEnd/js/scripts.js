@@ -188,9 +188,9 @@ function showLoadingScreen() {
   }
 
 function registerUser() {
+    showLoadingScreen();
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
-    
     var data = {
         email: email,
         password: password
@@ -211,6 +211,7 @@ function registerUser() {
                 // Show an error message in a div below the login form
                 var errorDiv = document.getElementById('submitErrorMessage');
                 errorDiv.innerText = 'Email already exists!';
+                hideLoadingScreen();
             }
         })
         .catch(error => {
@@ -432,8 +433,8 @@ function initializeState(){
 
         // Define the common options
         const commonOptions = [
-            { value: '1', text: 'True' },
-            { value: '0', text: 'False' },
+            { value: '1', text: 'Yes' },
+            { value: '0', text: 'No' },
             // Add more common options as needed
         ];
 
@@ -472,6 +473,7 @@ function addRowsToTable(numRows) {
 }
 
 function evaluateModel(){
+    showLoadingScreen();
     // Get selected values from the <select> elements
     const hairValue = document.getElementById("hair").value;
     const genderValue = document.getElementById("gender").value;
@@ -506,15 +508,18 @@ function evaluateModel(){
         } else {
             // Handle errors, e.g., display an error message to the user
             console.error('Error:', response.statusText);
+            hideLoadingScreen();
         }
     })
     .then(data => {
         // Handle the response data from your API
+        hideLoadingScreen();
         displayModal(data);
     })
     .catch(error => {
         // Handle any network or fetch-related errors
         console.error('Fetch error:', error);
+        hideLoadingScreen();
     });
 
     
