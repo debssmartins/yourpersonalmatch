@@ -21,14 +21,8 @@ namespace FluidMix.DAL.Data.Configurations
             builder.Property(e => e.Password)
                 .HasColumnName("pwd");
 
-            builder.Property(e => e.StreamCsv)
-                .HasColumnName("streamCsv");
-
             builder.Property(e => e.StreamModel)
                 .HasColumnName("streamModel");
-
-            builder.Property(e => e.isActive)
-               .HasColumnName("isActive");
 
         }
     }

@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration.UserSecrets;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.ML.AutoML;
 using Microsoft.ML.Data;
 using MyPersonalMatchApi.Entities;
@@ -64,7 +64,7 @@ namespace MyPersonalMatchApi.Controllers
             }
             catch (Exception ex)
             {
-                // Handle exceptions gracefully
+                // Handle exceptions 
                 return BadRequest("To train a model you must submit a variety of data. Please provide a variety of data in the table (do not put the same data in all rows of the table).");
             }
         }
@@ -82,7 +82,6 @@ namespace MyPersonalMatchApi.Controllers
                 // Token is missing or not provided
                 return Unauthorized("No token provided");
             }
-
 
             try
             {
@@ -117,12 +116,16 @@ namespace MyPersonalMatchApi.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginUser requestData)
         {
-            UserData? user = await _userService.CheckCredentials(requestData.Email, requestData.Password);
+            if(requestData.Email.IsNullOrEmpty() || requestData.Password.IsNullOrEmpty())
+            {
+                return BadRequest("Invalid email or password");
+            }
+
+            UserData? user = await _userService.CheckCredentials(requestData.Email?? string.Empty, requestData.Password ?? string.Empty);
 
             if (user == null)
             {
                 return BadRequest("Invalid email or password");
-               
             }
             else
             {
@@ -134,9 +137,12 @@ namespace MyPersonalMatchApi.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] LoginUser? requestData)
         {
-            
+            if (requestData == null)
+            {
+                return BadRequest("Invalid email or password");
+            }
 
-            var user = await _userService.CheckEmailAlreadyExists(requestData.Email);
+            var user = await _userService.CheckEmailAlreadyExists(requestData.Email ?? string.Empty);
 
             if (user != null)
             {

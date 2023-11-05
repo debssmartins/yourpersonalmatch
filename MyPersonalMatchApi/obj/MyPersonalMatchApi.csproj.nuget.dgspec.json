@@ -100,9 +100,17 @@
               "target": "Package",
               "version": "[0.20.1, )"
             },
+            "Nexmo.Csharp.Client": {
+              "target": "Package",
+              "version": "[5.2.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "Vonage": {
+              "target": "Package",
+              "version": "[6.12.0, )"
             }
           },
           "imports": [
