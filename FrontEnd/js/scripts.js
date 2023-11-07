@@ -262,7 +262,7 @@ function addRowsToTable(numRows) {
 //ENVIA EL CSV A LA API PARA ENTRENAR EL MODELO
 function sendDataTrainModel() {
     showLoadingScreen();
-       var csv_data = tableToCSV(); e
+       var csv_data = tableToCSV();
        var formData = new FormData();
        formData.append('csv_file', new Blob([csv_data], { type: 'text/csv' })); 
        let authToken = sessionStorage.getItem("authToken");

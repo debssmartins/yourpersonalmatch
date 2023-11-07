@@ -11881,3 +11881,7 @@ html {
   animation-delay: 1s;
 }
 
+.hover-trainmodel-th:hover {
+  background-color: #ffc107;
+  color: white;
+}
