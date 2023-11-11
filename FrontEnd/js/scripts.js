@@ -420,14 +420,34 @@ function showModalTrainModel(){
     });
 }
 
+function checkMail(email){
+    var errorDiv = document.getElementById('submitErrorMessage');
+    if(email.includes("@")){
+        errorDiv.style.display = 'block';
+        errorDiv.innerText = 'The username '+email+' is invalid due to the presence of the character @. For reference, consider the example username: Debora_Jesus.';
+    }else{
+        errorDiv.style.display = 'none';
+    }
+}
+
+function setupInputEvent(variable) {
+    var inputField = document.getElementById(variable);
+
+    if (inputField) {
+      inputField.addEventListener('input', function(event) {
+        checkMail(inputField.value)
+        console.log('Input value:', event.target.value);
+      });
+    } else {
+      console.error('Input field not found!');
+    }
+  }
 
 /**FUNCIONES DE LOGIN, REGISTRO Y LOGOUT */
   function loginUser() {
     showLoadingScreen();
-  
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
-  
     var data = {
       email: email,
       password: password
@@ -443,9 +463,7 @@ function showModalTrainModel(){
       .then(async response => {
         if (response.ok) {
           const userId = await response.text();
-  
           sessionStorage.setItem("authToken", JSON.stringify("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9") + "?" + userId);
-
           setTimeout(function() {
             hideLoadingScreen();
             window.location.href = 'trainmodel.html';
@@ -461,13 +479,15 @@ function showModalTrainModel(){
       });
   }
 
-function registerUser() {
+
+ 
+  function registerUser() {
     showLoadingScreen();
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     var data = {
-        email: email,
-        password: password
+        Email: email,
+        Password: password
     };
     
     fetch('https://mypersonalmatch.azurewebsites.net/register', {
@@ -475,20 +495,20 @@ function registerUser() {
         body: JSON.stringify(data),
         headers: {
             'Content-Type': 'application/json',
-            }
-        })
-        .then(response => {
-            if (response.ok) {
-                showModal();
-               
-            } else {
-                var errorDiv = document.getElementById('submitErrorMessage');
-                errorDiv.innerText = 'Email already exists!';
-                hideLoadingScreen();
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            showModal();
+        } else {
+            var errorDiv = document.getElementById('submitErrorMessage');
+            errorDiv.innerText = 'Email already exists!';
+            hideLoadingScreen();
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        hideLoadingScreen();
     });
 }
 
@@ -507,12 +527,10 @@ function logoutUser() {
 
  function submitMessage(){
     showLoadingScreen();
-  
     var sms = document.getElementById("messageContact").value;
     var email = document.getElementById("emailContact").value;
     var phone = document.getElementById("phoneContact").value;
     var name = document.getElementById("nameContact").value;
-
     var data = {
         Email: email,
         Sms: sms,
@@ -552,4 +570,6 @@ function logoutUser() {
   }
 
 
-
+/**Eventos que verifican los inputs de username*/
+document.addEventListener('DOMContentLoaded', setupInputEvent('email'));
+document.addEventListener('DOMContentLoaded', setupInputEvent('emailContact'));

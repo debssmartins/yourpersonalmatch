@@ -139,7 +139,13 @@ namespace MyPersonalMatchApi.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] LoginUser? requestData)
         {
+
             if (requestData == null)
+            {
+                return BadRequest("Invalid email or password");
+            }
+
+            if (requestData.Email.Equals(string.Empty) || requestData.Password.Equals(string.Empty)) 
             {
                 return BadRequest("Invalid email or password");
             }
