@@ -168,7 +168,7 @@ namespace MyPersonalMatchApi.Controllers
         [HttpPost("sendsms")]
         public IActionResult SendSMS([FromBody] SmsInfo info)
         {
-            string msg = "Name: " + info.Name + ", Phone: " + info.Phone + ", Email: " + info.Email + ", Message: " + info.Sms;
+            string msg = "Name: " + info.Name + ", Phone: " + info.Phone + ", UserName: " + info.Email + ", Message: " + info.Sms;
             var credentials = Credentials.FromApiKeyAndSecret(
              "47c3cd92",
              "UlAbOy5Odj9algRg"

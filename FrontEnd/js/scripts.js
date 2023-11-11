@@ -442,9 +442,7 @@ function setupInputEvent(variable) {
         checkMail(inputField.value)
         console.log('Input value:', event.target.value);
       });
-    } else {
-      console.error('Input field not found!');
-    }
+    } 
   }
 
 /**FUNCIONES DE LOGIN, REGISTRO Y LOGOUT */
