@@ -308,6 +308,7 @@ function sendDataTrainModel() {
 
 function evaluateModel(){
     showLoadingScreen();
+    var errorDiv = document.getElementById('submitErrorMessage');
     const hairValue = document.getElementById("hair").value;
     const genderValue = document.getElementById("gender").value;
     const bodyTypeValue = document.getElementById("bodytype").value;
@@ -339,11 +340,14 @@ function evaluateModel(){
         } else {
             console.error('Error:', response.statusText);
             hideLoadingScreen();
+            errorDiv.style.display = 'block';
+            errorDiv.innerText = 'No model was found! You should train your model first!';
         }
     })
     .then(data => {
         hideLoadingScreen();
         displayModal(data);
+        errorDiv.style.display = 'block';
     })
     .catch(error => {
         console.error('Fetch error:', error);
