@@ -11885,3 +11885,24 @@ html {
   background-color: #ffc107;
   color: white;
 }
+
+#hoverTitle:hover {
+  cursor: pointer;
+}
+
+#hoverTitle::before {
+  content: 'The model generates in 10 seconds. Train and evaluate as many times as needed!';
+  position: absolute;
+  display: none;
+  font-size: 0.875rem;
+  background: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 15px;
+  margin-top: 60px;
+  margin-left: 150px;
+}
+
+#hoverTitle:hover::before {
+  display: block;
+}

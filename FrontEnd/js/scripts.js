@@ -267,7 +267,7 @@ function sendDataTrainModel() {
        formData.append('csv_file', new Blob([csv_data], { type: 'text/csv' })); 
        let authToken = sessionStorage.getItem("authToken");
    
-       fetch('https://mypersonalmatch.azurewebsites.net/Home/trainmodel', {
+       fetch('https://mypersonalmatch.azurewebsites.net/trainmodel', {
            method: 'POST',
            body: formData,
            headers: {
@@ -284,14 +284,18 @@ function sendDataTrainModel() {
             hideLoadingScreen();
           
           }, 10000); 
+          showModalTrainModel();
                return response.text();
+              
            }else if (response.status == 400) {
             showModalFailToTrain();
+            
         } else {
                throw new Error(`HTTP Error: ${response.statusText}`);
            }
        })
        .then(data => {
+        
            console.log(data);
        })
        .catch(error => {
@@ -321,7 +325,7 @@ function evaluateModel(){
     };
   
   let authToken = sessionStorage.getItem("authToken");
-    fetch('https://mypersonalmatch.azurewebsites.net/Home/evaluateModel', {
+    fetch('https://mypersonalmatch.azurewebsites.net/evaluateModel', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -404,6 +408,18 @@ function showModalFailToTrain(){
      });
 }
 
+function showModalTrainModel(){
+    var modal = document.getElementById('modalTrainModel');
+    var modalText = document.getElementById('modalText');
+    modalText.textContent = "Your model has been successfully trained. You will now be redirected to the page to evaluate and check if the person you're interested in is a match!";
+    modal.style.display = 'block';
+    var modalOK = document.getElementById('buttonmodalOK');
+    modalOK.addEventListener('click', function() {
+        modal.style.display = 'none';
+        window.location.href = 'evaluate.html';
+    });
+}
+
 
 /**FUNCIONES DE LOGIN, REGISTRO Y LOGOUT */
   function loginUser() {
@@ -417,7 +433,7 @@ function showModalFailToTrain(){
       password: password
     };
   
-    fetch('https://mypersonalmatch.azurewebsites.net/Home/login', {
+    fetch('https://mypersonalmatch.azurewebsites.net/login', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
@@ -454,7 +470,7 @@ function registerUser() {
         password: password
     };
     
-    fetch('https://mypersonalmatch.azurewebsites.net/Home/register', {
+    fetch('https://mypersonalmatch.azurewebsites.net/register', {
         method: 'POST',
         body: JSON.stringify(data),
         headers: {
@@ -489,7 +505,7 @@ function logoutUser() {
 
 /**FUNCION QUE ENVIA SMS */
 
-function submitMessage(){
+ function submitMessage(){
     showLoadingScreen();
   
     var sms = document.getElementById("messageContact").value;
@@ -497,7 +513,6 @@ function submitMessage(){
     var phone = document.getElementById("phoneContact").value;
     var name = document.getElementById("nameContact").value;
 
-    console.log("1"+sms, email,phone,name);
     var data = {
         Email: email,
         Sms: sms,
@@ -505,25 +520,24 @@ function submitMessage(){
         Name: name
 
     };
-    console.log("2"+sms, email,phone,name, data);
-    fetch('https://localhost:44310/sendsms', {
+      fetch('https://mypersonalmatch.azurewebsites.net/sendsms', {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {
         'Content-Type': 'application/json',
       }
     })
-      .then(async response => {
+      .then(response => {
         if (response.ok) {
             hideLoadingScreen();
             showModal();
-
-          setTimeout(function() {
+            setTimeout(function() {
             hideModal();
             var errorDiv = document.getElementById('submitErrorMessage');
             errorDiv.style.display = 'none';
-
-          }, 4000); 
+            const formToReset = document.getElementById('contactForm');
+            formToReset.reset();
+          }, 3000); 
         } else {
             hideLoadingScreen();
             var errorDiv = document.getElementById('submitErrorMessage');
